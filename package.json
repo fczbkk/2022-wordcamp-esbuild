@@ -1,0 +1,18 @@
+{
+  "name": "2022-wordcamp-esbuild",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "esbuild src/index.js src/index2.js --bundle --minify --sourcemap --outdir=build --target=chrome90,firefox95,safari15",
+    "build2": "node ./build.js",
+    "dev": "esbuild src/index.js --bundle --sourcemap --outfile=build/index.js --watch",
+    "serve": "esbuild src/index.js --bundle --sourcemap --servedir=www --outdir=www/js"
+  },
+  "author": "Riki Fridrich <riki@fczbkk.com> (https://fczbkk.com/)",
+  "license": "MIT",
+  "devDependencies": {
+    "esbuild": "^0.14.23"
+  },
+  "dependencies": {
+    "lodash-es": "^4.17.21"
+  }
+}
